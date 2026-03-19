@@ -1,3 +1,4 @@
+import Counter from '../Counter/Counter';
 import styles from './MenuItem.module.scss';
 
 export function MenuItem({ name, price, ingredients }) {
@@ -7,6 +8,7 @@ export function MenuItem({ name, price, ingredients }) {
         <h3 className={styles.name}>{name}</h3>
         <span className={styles.price}>${price}</span>
       </div>
+      <Counter />
       <div className={styles.ingredients}>
         <p className={styles.label}>Ингредиенты:</p>
         <ul className={styles.list}>

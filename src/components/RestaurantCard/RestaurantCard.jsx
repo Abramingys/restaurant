@@ -2,7 +2,10 @@ import { MenuItem } from '../MenuItem/MenuItem';
 import { ReviewCard } from '../ReviewCard/ReviewCard';
 import styles from './RestaurantCard.module.scss';
 
-export function RestaurantCard({ name, menu, reviews }) {
+export function RestaurantCard({ data }) {
+  if (!data) return null;
+  const { name, menu, reviews } = data;
+
   return (
     <article className={styles.restaurant}>
       <h2 className={styles.name}>{name}</h2>
